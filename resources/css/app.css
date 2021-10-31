@@ -1,0 +1,460 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import 'vue2-perfect-scrollbar/dist/vue2-perfect-scrollbar.css';
+@import 'primevue/resources/themes/saga-blue/theme.css';
+@import 'primevue/resources/primevue.css';
+@import 'vue-select/dist/vue-select.css';
+@import 'vue-good-table/dist/vue-good-table.css';
+@import 'vue-plyr/dist/vue-plyr.css';
+@import 'vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.css';
+
+/* QwikTest - App Styles */
+
+/************ TABLE OF CONTENTS ***************
+1. General Styles
+2. NProgress Styles
+3. PrimeVue Component Styles
+4. Vue Good Table Styles
+5. CKEditor Styles
+**********************************************/
+
+.page-heading {
+    @apply py-4 text-lg font-semibold leading-tight text-gray-800;
+}
+
+.card {
+    @apply shadow sm:rounded-md;
+}
+
+.card-body {
+    @apply px-2 py-4 bg-white sm:p-4;
+}
+
+.qt-btn {
+    @apply font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150;
+}
+
+.qt-btn-lg {
+    @apply font-bold uppercase text-base px-8 py-3 rounded shadow-md hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150;
+}
+
+.qt-btn-sm {
+    @apply font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150;
+}
+
+.qt-btn-primary {
+    @apply bg-gray-500 hover:bg-gray-600 text-white;
+}
+
+.qt-btn-success {
+    @apply bg-green-500 hover:bg-green-600 text-white;
+}
+
+.qt-btn-danger {
+    @apply bg-red-500 hover:bg-red-600 text-white;
+}
+
+.qt-link-success {
+    @apply transition duration-150 ease-in-out cursor-pointer text-green-500 hover:text-green-700 hover:underline;
+}
+
+.q-data p, .q-data div {
+    @apply mb-4;
+}
+
+.q-data .math-tex {
+    @apply text-base;
+}
+
+.question table, .q-data table {
+    @apply table-fixed border-collapse border border-gray-400 mb-4;
+}
+
+.question th, .q-data th {
+    @apply border border-gray-400 text-center p-1 bg-gray-50 align-top;
+}
+
+.question td, .q-data td {
+    @apply border border-gray-400 py-1 px-2 align-top;
+}
+
+.badge {
+    @apply text-sm px-3 py-1 rounded-sm;
+}
+
+.badge-sm {
+    @apply text-xs px-3 py-1 rounded-sm;
+}
+
+.badge-success {
+    @apply bg-green-200 text-green-800;
+}
+
+.badge-danger {
+    @apply bg-red-200 text-red-800;
+}
+
+.question p, .question div, .question span  {
+    @apply leading-relaxed;
+}
+
+.custom-control-label {
+    @apply text-sm;
+}
+
+/* NProgress Styles */
+
+#nprogress .spinner-icon {
+    width: 12px;
+    height: 12px;
+    border-top-color: #fff !important;
+    border-left-color: #fff !important;
+}
+
+/* PrimeVue Component Styles */
+
+#admin-header .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-text {
+    @apply text-gray-800 sm:text-blue-50;
+}
+
+#admin-header .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-icon {
+    @apply text-gray-800 sm:text-blue-50;
+}
+
+#admin-header .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-submenu-icon {
+    @apply text-gray-800 sm:text-blue-50;
+}
+
+#admin-header .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link:not(.p-disabled):hover {
+    background: #3d4858;
+}
+
+#admin-header .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link:focus {
+    box-shadow: none;
+}
+
+#admin-header .p-menubar .p-menubar-root-list > .p-menuitem.p-menuitem-active > .p-menuitem-link {
+    background: #3d4858;
+}
+
+.p-component {
+    @apply font-sans text-sm;
+}
+
+.p-menubar {
+    @apply border-none bg-transparent;
+    padding: 0.5rem 0;
+}
+
+.p-sidebar-close {
+    top: 12px !important;
+    right: 12px !important;
+}
+
+.p-tag {
+    @apply text-xs;
+}
+
+.p-message {
+    @apply mb-0 mt-8 text-sm;
+}
+
+.p-message .p-message-text {
+    @apply text-sm;
+}
+
+.p-skeleton {
+    @apply bg-blue-50;
+}
+
+.tiny-input .p-inputnumber-input {
+    height: 30px;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    width: 55px;
+}
+
+.section-form .p-inputnumber-input {
+    @apply w-24;
+}
+
+/* VueGoodTable Styles */
+
+table.vgt-table {
+    @apply border-none bg-transparent;
+}
+
+.vgt-table thead {
+    @apply bg-white;
+}
+
+.vgt-table.bordered th {
+    @apply border-none bg-transparent uppercase text-sm;
+    background: none;
+}
+
+.vgt-table.bordered thead tr:nth-child(2) th {
+    @apply border-none bg-gray-100;
+    padding: 10px;
+}
+
+.vgt-table.bordered tbody tr {
+    @apply border-b border-t border-gray-100 bg-white;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.vgt-table.bordered tbody tr:hover {
+    @apply bg-gray-50;
+}
+
+.vgt-table.bordered td {
+    @apply border-none;
+    padding: 5px 15px;
+    font-size: 0.8rem;
+    vertical-align: middle;
+}
+
+.vgt-wrap__footer .footer__navigation__page-info__current-entry {
+    @apply border-none text-white bg-gray-400 rounded-sm text-sm outline-none;
+    line-height: 1.25rem;
+    width: 50px;
+    height: 30px;
+}
+
+.vgt-wrap__footer .footer__navigation__page-info__current-entry [type='text'] {
+    @apply p-0 rounded-sm text-sm;
+}
+
+.vgt-wrap__footer .footer__row-count__select {
+    @apply text-white text-sm bg-gray-400 rounded-sm border-gray-400;
+    background-image: none;
+}
+
+.vgt-wrap__footer .footer__row-count__select:focus {
+    @apply border-gray-300 outline-none;
+}
+
+.vgt-global-search {
+    @apply border-none bg-transparent;
+}
+
+.vgt-wrap__footer {
+    @apply border-none bg-white px-4 pt-4 pb-0 text-sm;
+    background: none;
+}
+
+.vgt-wrap__footer .footer__row-count__label {
+    @apply text-sm uppercase;
+}
+
+.vgt-wrap__footer .footer__navigation__page-info span {
+    @apply text-sm uppercase;
+}
+.vgt-wrap__footer .footer__navigation__page-btn span {
+    @apply text-sm uppercase;
+}
+
+/* CKEditor Styles */
+
+.cke_bottom {
+    border-top: none !important;
+    background: #fff !important;
+}
+
+.cke_path {
+    display: none !important;
+}
+
+.cke_resizer {
+    border-color: transparent #ebebeb transparent transparent !important;
+}
+
+/* VueSelect Styles */
+
+.vs__dropdown-toggle {
+    padding: 7px 4px;
+}
+
+.vs__dropdown-option {
+    @apply text-sm;
+}
+
+.vs__search, .vs__search:focus, .vs__selected {
+    @apply m-0 text-sm;
+}
+
+/* Vue DateTime Styles */
+.vdatetime-input {
+    @apply w-full bg-white text-sm;
+    color: #495057;
+    padding: 0.5rem 0.5rem;
+    border: 1px solid #ced4da !important;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 3px;
+}
+
+/* Question Option Styles */
+.q-radio .q-options .q-option {
+    @apply relative bg-white block my-2 mx-0 overflow-hidden rounded;
+}
+.q-radio .q-options .q-option input {
+    @apply absolute cursor-pointer hidden;
+    width: 32px;
+    height: 32px;
+    order: 1;
+    z-index: 2;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.q-radio .q-options .q-option span.o-id {
+    @apply absolute inline-block bg-gray-100 rounded-full text-center text-sm;
+    left: 25px;
+    top: 10px;
+    width: 32px;
+    height: 32px;
+    padding: 5px;
+    margin-right: 10px;
+    line-height: 21px;
+}
+.q-radio .q-options .q-option span.squared {
+    @apply rounded text-sm;
+}
+
+.q-radio .q-options .q-option span.match {
+    @apply rounded text-sm w-12;
+}
+
+.q-radio .q-options .q-option span.o-bars {
+    @apply absolute;
+    right: 25px;
+    top: 15px;
+}
+.q-radio .q-options .q-option label {
+    @apply block overflow-hidden rounded w-full text-left relative mb-0;
+    border: 1px solid #f3f4f6;
+    padding: 10px 70px 10px 30px;
+    color: #3c454c;
+    z-index: 2;
+    transition: color 200ms ease-in;
+}
+.q-radio .q-options .q-option label span.o-text {
+    @apply block;
+    margin-left: 50px;
+    margin-top: 5px;
+    min-height: 30px;
+}
+.q-radio .q-options .q-option label span.o-text p {
+    @apply m-0;
+}
+.q-radio .q-options .q-option input:checked ~ label {
+    @apply border border-qt-option;
+}
+.q-radio .q-options .q-option input:checked ~ label span.o-id {
+    @apply text-white bg-qt-option;
+}
+.q-radio .q-options .q-option label.answered {
+    @apply border border-qt-option;
+}
+.q-radio .q-options .q-option label.answered span.o-id {
+    @apply text-white bg-qt-option;
+}
+.q-radio .q-options .q-option label.correct {
+    @apply border border-green-400 !important;
+}
+.q-radio .q-options .q-option label.correct span.o-id {
+    @apply text-white bg-green-400 !important;
+}
+.q-radio .q-options .q-option label.correct:after {
+    @apply absolute right-0 top-0 cursor-pointer text-white text-xs text-center;
+    content: "Correct";
+    z-index: 2;
+    transition: all 200ms ease-in;
+    padding: 0 30px 3px 40px;
+    background: rgba(52, 211, 153, 1) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 20 20' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-check'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") no-repeat 20px 0px;
+    width: 120px;
+}
+
+.q-radio .q-options .q-option label.wrong {
+    @apply border border-red-400 !important;
+}
+.q-radio .q-options .q-option label.wrong span.o-id {
+    @apply bg-red-400 text-white !important;
+}
+.q-radio .q-options .q-option label.wrong:after {
+    @apply absolute right-0 top-0 cursor-pointer text-white text-xs text-center;
+    content: "Wrong";
+    z-index: 2;
+    transition: all 200ms ease-in;
+    padding: 0 30px 3px 40px;
+    background: rgba(248, 113, 113, 1) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 20 20' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-x'%3E%3Cline x1='18' y1='6' x2='6' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='6' x2='18' y2='18'%3E%3C/line%3E%3C/svg%3E") no-repeat 25px 2px;
+    width: 120px;
+}
+
+/* Question Input Styles */
+.q-inputs .q-input {
+    @apply relative w-full;
+}
+
+.q-inputs .correct:after {
+    @apply absolute right-0 top-0 cursor-pointer text-white text-xs text-center rounded-tr;
+    content: "Correct";
+    z-index: 2;
+    transition: all 200ms ease-in;
+    padding: 0 30px 3px 40px;
+    background: rgba(52, 211, 153, 1) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 20 20' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-check'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") no-repeat 20px 0px;
+    width: 120px;
+}
+
+.q-inputs .wrong:after {
+    @apply absolute right-0 top-0 cursor-pointer text-white text-xs text-center rounded-tr;
+    content: "Wrong";
+    z-index: 2;
+    transition: all 200ms ease-in;
+    padding: 0 30px 3px 40px;
+    background: rgba(248, 113, 113, 1) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 20 20' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-x'%3E%3Cline x1='18' y1='6' x2='6' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='6' x2='18' y2='18'%3E%3C/line%3E%3C/svg%3E") no-repeat 25px 2px;
+    width: 120px;
+}
+
+.q-inputs .q-input .i-id {
+    @apply absolute flex items-center px-4 border-r h-full cursor-pointer;
+}
+
+.q-inputs .q-input .i-id label {
+    @apply rounded-full text-gray-600 bg-gray-100 h-7 w-7 leading-relaxed font-semibold text-center;
+}
+
+.q-inputs .answered .i-id label {
+    @apply text-white bg-qt-option !important;
+}
+
+.q-inputs .correct .i-id label {
+    @apply text-white bg-green-400 !important;
+}
+
+.q-inputs .wrong .i-id label {
+    @apply text-white bg-red-400 !important;
+}
+
+.q-inputs .q-input input {
+    @apply w-full text-gray-600 focus:outline-none bg-white font-normal h-12 flex items-center pl-20  border-gray-300 rounded border;
+}
+
+.q-inputs .answered input {
+    @apply border border-qt-option !important;
+}
+
+.q-inputs .correct input {
+    @apply border border-green-400 !important;
+}
+
+.q-inputs .wrong input {
+    @apply border border-red-400 !important;
+}
+
+
